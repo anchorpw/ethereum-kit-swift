@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA12013206BFE800052AE8B /* CryptoTests.swift */; };
+		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
+		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
+		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
+		AE005724204D852E007AA468 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005723204D852E007AA468 /* AddressTests.swift */; };
+		AE005726204EE61D007AA468 /* TransactionSigningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005725204EE61D007AA468 /* TransactionSigningTests.swift */; };
+		AE0057362053A510007AA468 /* PrivateKeyAndPublicKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0057352053A510007AA468 /* PrivateKeyAndPublicKeyTests.swift */; };
+		AE0057382053A5E4007AA468 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0057372053A5E4007AA468 /* WalletTests.swift */; };
+		AE1270E920E8B1CA00487956 /* HDPublicKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1270E820E8B1CA00487956 /* HDPublicKeyTests.swift */; };
+		AE1F8C21208CDA0C0088A043 /* MessageSigningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C20208CDA0C0088A043 /* MessageSigningTests.swift */; };
+		AE3EB60720AC941A00D61CE6 /* ERC20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3EB60620AC941A00D61CE6 /* ERC20Tests.swift */; };
+		AE4B2E8720EB5DF60080F3EA /* BIP32Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E8620EB5DF60080F3EA /* BIP32Tests.swift */; };
+		AE53C96C20D4CF1C00714EF4 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53C96B20D4CF1C00714EF4 /* NetworkTests.swift */; };
+		AE5EE9BD20DB8425007F9D72 /* BalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9BC20DB8425007F9D72 /* BalanceTests.swift */; };
+		AE5EE9BF20DB84C2007F9D72 /* BlockParameterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9BE20DB84C2007F9D72 /* BlockParameterTests.swift */; };
+		AE5EE9C120DB8615007F9D72 /* RawTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9C020DB8615007F9D72 /* RawTransactionTests.swift */; };
+		AE5EE9C320DB86E7007F9D72 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9C220DB86E7007F9D72 /* TransactionTests.swift */; };
+		AE5EE9C520DB882F007F9D72 /* SentTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9C420DB882F007F9D72 /* SentTransactionTests.swift */; };
+		AE90A0781FFA698D005ED7AF /* EthereumKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */; };
+		AEB4C5DF20C03D62001D96BF /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4C5DE20C03D62001D96BF /* MnemonicTests.swift */; };
+		AEBA90F31FFA2C6A003EA2BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA90F21FFA2C6A003EA2BA /* AppDelegate.swift */; };
+		AEBA90F51FFA2C6A003EA2BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA90F41FFA2C6A003EA2BA /* ViewController.swift */; };
+		AEBA90F81FFA2C6A003EA2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90F61FFA2C6A003EA2BA /* Main.storyboard */; };
+		AEBA90FA1FFA2C6A003EA2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90F91FFA2C6A003EA2BA /* Assets.xcassets */; };
+		AEBA90FD1FFA2C6A003EA2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90FB1FFA2C6A003EA2BA /* LaunchScreen.storyboard */; };
+		C90BAF73C8D41757C4A670F4 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C565589777A719A8E557A6 /* Pods_Example.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE90A0801FFA69D1005ED7AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEBA90CC1FFA21ED003EA2BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEBA90EF1FFA2C6A003EA2BA;
+			remoteInfo = Example;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08B725C25F7D8A5350A5B6FE /* Pods-CryptoEthereumSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoEthereumSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoEthereumSwift/Pods-CryptoEthereumSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		0AA12013206BFE800052AE8B /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		0E740F64B473E34FFA5CB057 /* Pods_EthereumKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A371099205052C1003A40BB /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		2127CE539639DE0898138A4A /* Pods-EthereumKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.debug.xcconfig"; sourceTree = "<group>"; };
+		2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		504FEF28AD5A1F70EEF5E513 /* Pods-CryptoEthereumSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoEthereumSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoEthereumSwift/Pods-CryptoEthereumSwift.release.xcconfig"; sourceTree = "<group>"; };
+		63C6430CD2E437FEBEFF1327 /* Pods-EthereumKitSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKitSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKitSwift/Pods-EthereumKitSwift.release.xcconfig"; sourceTree = "<group>"; };
+		88A9121619A98D1C5DEC7C7D /* Pods_EthereumKitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C565589777A719A8E557A6 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4069DB87972D826B1B9C25B /* Pods_CryptoEthereumSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoEthereumSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE00571F204D7D59007AA468 /* RLPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPTests.swift; sourceTree = "<group>"; };
+		AE005721204D82A1007AA468 /* EIP155SignerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIP155SignerTests.swift; sourceTree = "<group>"; };
+		AE005723204D852E007AA468 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		AE005725204EE61D007AA468 /* TransactionSigningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSigningTests.swift; sourceTree = "<group>"; };
+		AE0057352053A510007AA468 /* PrivateKeyAndPublicKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyAndPublicKeyTests.swift; sourceTree = "<group>"; };
+		AE0057372053A5E4007AA468 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
+		AE1270E820E8B1CA00487956 /* HDPublicKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPublicKeyTests.swift; sourceTree = "<group>"; };
+		AE1F8C20208CDA0C0088A043 /* MessageSigningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSigningTests.swift; sourceTree = "<group>"; };
+		AE3EB60620AC941A00D61CE6 /* ERC20Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERC20Tests.swift; sourceTree = "<group>"; };
+		AE4B2E8620EB5DF60080F3EA /* BIP32Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIP32Tests.swift; sourceTree = "<group>"; };
+		AE53C96B20D4CF1C00714EF4 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		AE5EE9BC20DB8425007F9D72 /* BalanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTests.swift; sourceTree = "<group>"; };
+		AE5EE9BE20DB84C2007F9D72 /* BlockParameterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockParameterTests.swift; sourceTree = "<group>"; };
+		AE5EE9C020DB8615007F9D72 /* RawTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawTransactionTests.swift; sourceTree = "<group>"; };
+		AE5EE9C220DB86E7007F9D72 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
+		AE5EE9C420DB882F007F9D72 /* SentTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentTransactionTests.swift; sourceTree = "<group>"; };
+		AE90A0751FFA698D005ED7AF /* EthereumKitSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthereumKitSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumKitTests.swift; sourceTree = "<group>"; };
+		AE90A0791FFA698D005ED7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB4C5DE20C03D62001D96BF /* MnemonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
+		AEBA90F01FFA2C6A003EA2BA /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBA90F21FFA2C6A003EA2BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEBA90F41FFA2C6A003EA2BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEBA90F71FFA2C6A003EA2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEBA90F91FFA2C6A003EA2BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEBA90FC1FFA2C6A003EA2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEBA90FE1FFA2C6A003EA2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF9A0D833AC594CD0816F44 /* Pods-EthereumKitSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKitSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKitSwift/Pods-EthereumKitSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D76106C85874AC469D1927C0 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F0C8F9B75B19E12150130117 /* Pods-EthereumKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE90A0721FFA698D005ED7AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA90ED1FFA2C6A003EA2BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90BAF73C8D41757C4A670F4 /* Pods_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FF65CA544CE0A0023C563F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */,
+				94C565589777A719A8E557A6 /* Pods_Example.framework */,
+				A4069DB87972D826B1B9C25B /* Pods_CryptoEthereumSwift.framework */,
+				0E740F64B473E34FFA5CB057 /* Pods_EthereumKit.framework */,
+				88A9121619A98D1C5DEC7C7D /* Pods_EthereumKitSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC65C6845C23370E9809B2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D76106C85874AC469D1927C0 /* Pods-Example.debug.xcconfig */,
+				2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */,
+				08B725C25F7D8A5350A5B6FE /* Pods-CryptoEthereumSwift.debug.xcconfig */,
+				504FEF28AD5A1F70EEF5E513 /* Pods-CryptoEthereumSwift.release.xcconfig */,
+				2127CE539639DE0898138A4A /* Pods-EthereumKit.debug.xcconfig */,
+				F0C8F9B75B19E12150130117 /* Pods-EthereumKit.release.xcconfig */,
+				CDF9A0D833AC594CD0816F44 /* Pods-EthereumKitSwift.debug.xcconfig */,
+				63C6430CD2E437FEBEFF1327 /* Pods-EthereumKitSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE90A0761FFA698D005ED7AF /* EthereumKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */,
+				AE53C96B20D4CF1C00714EF4 /* NetworkTests.swift */,
+				0AA12013206BFE800052AE8B /* CryptoTests.swift */,
+				AE0057372053A5E4007AA468 /* WalletTests.swift */,
+				AE0057352053A510007AA468 /* PrivateKeyAndPublicKeyTests.swift */,
+				AE1270E820E8B1CA00487956 /* HDPublicKeyTests.swift */,
+				AE00571F204D7D59007AA468 /* RLPTests.swift */,
+				AE005721204D82A1007AA468 /* EIP155SignerTests.swift */,
+				AE005723204D852E007AA468 /* AddressTests.swift */,
+				AE005725204EE61D007AA468 /* TransactionSigningTests.swift */,
+				AE1F8C20208CDA0C0088A043 /* MessageSigningTests.swift */,
+				1A371099205052C1003A40BB /* ConverterTests.swift */,
+				AE3EB60620AC941A00D61CE6 /* ERC20Tests.swift */,
+				AEB4C5DE20C03D62001D96BF /* MnemonicTests.swift */,
+				AE5EE9BC20DB8425007F9D72 /* BalanceTests.swift */,
+				AE5EE9BE20DB84C2007F9D72 /* BlockParameterTests.swift */,
+				AE5EE9C020DB8615007F9D72 /* RawTransactionTests.swift */,
+				AE5EE9C220DB86E7007F9D72 /* TransactionTests.swift */,
+				AE4B2E8620EB5DF60080F3EA /* BIP32Tests.swift */,
+				AE5EE9C420DB882F007F9D72 /* SentTransactionTests.swift */,
+				AE90A0791FFA698D005ED7AF /* Info.plist */,
+			);
+			path = EthereumKitTests;
+			sourceTree = "<group>";
+		};
+		AEBA90CB1FFA21ED003EA2BA = {
+			isa = PBXGroup;
+			children = (
+				2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */,
+				AE90A0761FFA698D005ED7AF /* EthereumKitTests */,
+				AEBA90F11FFA2C6A003EA2BA /* Example */,
+				AEBA90D61FFA21ED003EA2BA /* Products */,
+				9EC65C6845C23370E9809B2E /* Pods */,
+				6FF65CA544CE0A0023C563F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEBA90D61FFA21ED003EA2BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA90F01FFA2C6A003EA2BA /* Example.app */,
+				AE90A0751FFA698D005ED7AF /* EthereumKitSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEBA90F11FFA2C6A003EA2BA /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA90F21FFA2C6A003EA2BA /* AppDelegate.swift */,
+				AEBA90F41FFA2C6A003EA2BA /* ViewController.swift */,
+				AEBA90F61FFA2C6A003EA2BA /* Main.storyboard */,
+				AEBA90F91FFA2C6A003EA2BA /* Assets.xcassets */,
+				AEBA90FB1FFA2C6A003EA2BA /* LaunchScreen.storyboard */,
+				AEBA90FE1FFA2C6A003EA2BA /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE90A0741FFA698D005ED7AF /* EthereumKitSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE90A07F1FFA698D005ED7AF /* Build configuration list for PBXNativeTarget "EthereumKitSwiftTests" */;
+			buildPhases = (
+				AE90A0711FFA698D005ED7AF /* Sources */,
+				AE90A0721FFA698D005ED7AF /* Frameworks */,
+				AE90A0731FFA698D005ED7AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE90A0811FFA69D1005ED7AF /* PBXTargetDependency */,
+			);
+			name = EthereumKitSwiftTests;
+			productName = WalletKitTests;
+			productReference = AE90A0751FFA698D005ED7AF /* EthereumKitSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEBA90EF1FFA2C6A003EA2BA /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBA90FF1FFA2C6A003EA2BA /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				E6CF3EC1960236A2CFC5F2E1 /* [CP] Check Pods Manifest.lock */,
+				AEBA90EC1FFA2C6A003EA2BA /* Sources */,
+				AEBA90ED1FFA2C6A003EA2BA /* Frameworks */,
+				AEBA90EE1FFA2C6A003EA2BA /* Resources */,
+				01F857A0E71C06E7CA5ED062 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = AEBA90F01FFA2C6A003EA2BA /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEBA90CC1FFA21ED003EA2BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = yuzushioh;
+				TargetAttributes = {
+					AE90A0741FFA698D005ED7AF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AEBA90EF1FFA2C6A003EA2BA;
+					};
+					AEBA90EF1FFA2C6A003EA2BA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = AEBA90CF1FFA21ED003EA2BA /* Build configuration list for PBXProject "EthereumKitSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEBA90CB1FFA21ED003EA2BA;
+			productRefGroup = AEBA90D61FFA21ED003EA2BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEBA90EF1FFA2C6A003EA2BA /* Example */,
+				AE90A0741FFA698D005ED7AF /* EthereumKitSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE90A0731FFA698D005ED7AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA90EE1FFA2C6A003EA2BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBA90FD1FFA2C6A003EA2BA /* LaunchScreen.storyboard in Resources */,
+				AEBA90FA1FFA2C6A003EA2BA /* Assets.xcassets in Resources */,
+				AEBA90F81FFA2C6A003EA2BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01F857A0E71C06E7CA5ED062 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/EthereumKitSwift/EthereumKitSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumKitSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CF3EC1960236A2CFC5F2E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE90A0711FFA698D005ED7AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE005726204EE61D007AA468 /* TransactionSigningTests.swift in Sources */,
+				AE0057382053A5E4007AA468 /* WalletTests.swift in Sources */,
+				AEB4C5DF20C03D62001D96BF /* MnemonicTests.swift in Sources */,
+				AE5EE9C320DB86E7007F9D72 /* TransactionTests.swift in Sources */,
+				AE005720204D7D59007AA468 /* RLPTests.swift in Sources */,
+				AE0057362053A510007AA468 /* PrivateKeyAndPublicKeyTests.swift in Sources */,
+				AE4B2E8720EB5DF60080F3EA /* BIP32Tests.swift in Sources */,
+				AE5EE9C520DB882F007F9D72 /* SentTransactionTests.swift in Sources */,
+				0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */,
+				AE53C96C20D4CF1C00714EF4 /* NetworkTests.swift in Sources */,
+				AE5EE9C120DB8615007F9D72 /* RawTransactionTests.swift in Sources */,
+				AE1F8C21208CDA0C0088A043 /* MessageSigningTests.swift in Sources */,
+				AE1270E920E8B1CA00487956 /* HDPublicKeyTests.swift in Sources */,
+				AE5EE9BF20DB84C2007F9D72 /* BlockParameterTests.swift in Sources */,
+				AE5EE9BD20DB8425007F9D72 /* BalanceTests.swift in Sources */,
+				AE3EB60720AC941A00D61CE6 /* ERC20Tests.swift in Sources */,
+				AE90A0781FFA698D005ED7AF /* EthereumKitTests.swift in Sources */,
+				AE005724204D852E007AA468 /* AddressTests.swift in Sources */,
+				1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */,
+				AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA90EC1FFA2C6A003EA2BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBA90F51FFA2C6A003EA2BA /* ViewController.swift in Sources */,
+				AEBA90F31FFA2C6A003EA2BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE90A0811FFA69D1005ED7AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEBA90EF1FFA2C6A003EA2BA /* Example */;
+			targetProxy = AE90A0801FFA69D1005ED7AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEBA90F61FFA2C6A003EA2BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEBA90F71FFA2C6A003EA2BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEBA90FB1FFA2C6A003EA2BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEBA90FC1FFA2C6A003EA2BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE90A07D1FFA698D005ED7AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7JPNQ2UD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/crypto/include";
+				INFOPLIST_FILE = EthereumKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.EthereumKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Debug;
+		};
+		AE90A07E1FFA698D005ED7AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7JPNQ2UD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/crypto/include";
+				INFOPLIST_FILE = EthereumKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.EthereumKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Release;
+		};
+		AEBA90DB1FFA21ED003EA2BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = "";
+				MODULEMAP_PRIVATE_FILE = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/EthereumKit/ModuleMap $(SRCROOT)/Libraries";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEBA90DC1FFA21ED003EA2BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = "";
+				MODULEMAP_PRIVATE_FILE = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/EthereumKit/ModuleMap $(SRCROOT)/Libraries";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEBA91001FFA2C6A003EA2BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D76106C85874AC469D1927C0 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anchor.kit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEBA91011FFA2C6A003EA2BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anchor.kit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE90A07F1FFA698D005ED7AF /* Build configuration list for PBXNativeTarget "EthereumKitSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE90A07D1FFA698D005ED7AF /* Debug */,
+				AE90A07E1FFA698D005ED7AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBA90CF1FFA21ED003EA2BA /* Build configuration list for PBXProject "EthereumKitSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBA90DB1FFA21ED003EA2BA /* Debug */,
+				AEBA90DC1FFA21ED003EA2BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBA90FF1FFA2C6A003EA2BA /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBA91001FFA2C6A003EA2BA /* Debug */,
+				AEBA91011FFA2C6A003EA2BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEBA90CC1FFA21ED003EA2BA /* Project object */;
+}

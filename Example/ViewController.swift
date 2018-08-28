@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EthereumKit
+import EthereumKitSwift
 
 class ViewController: UIViewController {
 
