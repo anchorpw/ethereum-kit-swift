@@ -4,13 +4,29 @@
 // swiftlint:disable file_length
 import EthereumKitSwift
 
-fileprivate func readWords(fromFileWithName fileName: String) -> [String] {
+public enum WordsListError: LocalizedError {
+	case noSuchFile(String)
+	case incorrectFormat(String)
+
+	public var errorDescription: String? {
+		switch self {
+        case .noSuchFile(let fileName):
+			return "No such file \(fileName).json"
+		case .incorrectFormat(let fileName):
+			return "Incorrect format of file \(fileName).json"
+		}
+	}
+}
+
+fileprivate func readWords(fromFileWithName fileName: String) throws -> [String] {
+	guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+ 		throw WordsListError.noSuchFile(fileName)
+	}
 	guard
-		let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
 		let data = try? Data(contentsOf: url),
 		let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
 		let words = jsonObject as? [String] else {
-			return []
+			throw WordsListError.incorrectFormat(fileName)
 		}
 	return words
 }
@@ -25,24 +41,24 @@ public enum WordsList {
 	case korean
 	case spanish
 
-	public var words: [String] {
+	public func words() throws -> [String] {
 		switch self {
         case .chineseSimplified:
-			return readWords(fromFileWithName: ChineseSimplified.fileName)
+			return try readWords(fromFileWithName: ChineseSimplified.fileName)
         case .chineseTraditional:
-			return readWords(fromFileWithName: ChineseTraditional.fileName)
+			return try readWords(fromFileWithName: ChineseTraditional.fileName)
         case .english:
-			return readWords(fromFileWithName: English.fileName)
+			return try readWords(fromFileWithName: English.fileName)
         case .french:
-			return readWords(fromFileWithName: French.fileName)
+			return try readWords(fromFileWithName: French.fileName)
         case .italian:
-			return readWords(fromFileWithName: Italian.fileName)
+			return try readWords(fromFileWithName: Italian.fileName)
         case .japanese:
-			return readWords(fromFileWithName: Japanese.fileName)
+			return try readWords(fromFileWithName: Japanese.fileName)
         case .korean:
-			return readWords(fromFileWithName: Korean.fileName)
+			return try readWords(fromFileWithName: Korean.fileName)
         case .spanish:
-			return readWords(fromFileWithName: Spanish.fileName)
+			return try readWords(fromFileWithName: Spanish.fileName)
 		}
 	}
 }
