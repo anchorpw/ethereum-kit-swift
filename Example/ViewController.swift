@@ -39,43 +39,43 @@ class ViewController: UIViewController {
         // - network: network to use
         // - nodeEndpoint: url for the node you want to connect
         // - etherscanAPIKey: api key of etherscan
-        let configuration = Configuration(
-            network: .ropsten,
-            nodeEndpoint: "https://ropsten.infura.io/z1sEfnzz0LLMsdYMX4PV",
-            etherscanAPIKey: "XE7QVJNVMKJT75ATEPY1HPWTPYCVCKMMJ7",
-            debugPrints: true
-        )
-        
-        let geth = Geth(configuration: configuration)
-        
-        // To get a balance of an address, call `getBalance`.
-        geth.getBalance(of: address) { _ in }
-        
-        // You can get the current nonce by calling
-        geth.getTransactionCount(of: address) { result in
-            switch result {
-            case .success(let nonce):
-                let wei: BInt
-                do {
-                    wei = try Converter.toWei(ether: "0.00001")
-                } catch let error {
-                    fatalError("Error: \(error.localizedDescription)")
-                }
-                
-                let rawTransaction = RawTransaction(value: wei, to: address, gasPrice: Converter.toWei(GWei: 10), gasLimit: 21000, nonce: nonce)
-                let tx: String
-                do {
-                    tx = try wallet.sign(rawTransaction: rawTransaction)
-                } catch let error {
-                    fatalError("Error: \(error.localizedDescription)")
-                }
-                
-                // It returns the transaction ID.
-                geth.sendRawTransaction(rawTransaction: tx) { _ in }
-                
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
-            }
-        }
+//        let configuration = Configuration(
+//            network: .ropsten,
+//            nodeEndpoint: "https://ropsten.infura.io/z1sEfnzz0LLMsdYMX4PV",
+//            etherscanAPIKey: "XE7QVJNVMKJT75ATEPY1HPWTPYCVCKMMJ7",
+//            debugPrints: true
+//        )
+//        
+//        let geth = Geth(configuration: configuration)
+//        
+//        // To get a balance of an address, call `getBalance`.
+//        geth.getBalance(of: address) { _ in }
+//        
+//        // You can get the current nonce by calling
+//        geth.getTransactionCount(of: address) { result in
+//            switch result {
+//            case .success(let nonce):
+//                let wei: BInt
+//                do {
+//                    wei = try Converter.toWei(ether: "0.00001")
+//                } catch let error {
+//                    fatalError("Error: \(error.localizedDescription)")
+//                }
+//                
+//                let rawTransaction = RawTransaction(value: wei, to: address, gasPrice: Converter.toWei(GWei: 10), gasLimit: 21000, nonce: nonce)
+//                let tx: String
+//                do {
+//                    tx = try wallet.sign(rawTransaction: rawTransaction)
+//                } catch let error {
+//                    fatalError("Error: \(error.localizedDescription)")
+//                }
+//                
+//                // It returns the transaction ID.
+//                geth.sendRawTransaction(rawTransaction: tx) { _ in }
+//                
+//            case .failure(let error):
+//                print("Error: \(error.localizedDescription)")
+//            }
+//        }
     }
 }
