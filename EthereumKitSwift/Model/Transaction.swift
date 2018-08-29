@@ -1,3 +1,5 @@
+import BigInt
+
 /// Represents transaction
 public struct Transaction {
     
@@ -82,7 +84,7 @@ public struct Transaction {
     }
     
     public var balance: Balance {
-        return Balance(wei: BInt(number: value, withBase: 10)!)
+        return Balance(wei: BigInt(value, radix: 10)!)
     }
 }
 

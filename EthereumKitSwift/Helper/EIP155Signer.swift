@@ -1,4 +1,5 @@
 import CryptoSwift
+import BigInt
 
 public struct EIP155Signer {
     
@@ -43,27 +44,27 @@ public struct EIP155Signer {
     }
 
     @available(*, deprecated, renamed: "calculateRSV(signature:)")
-    public func calculateRSV(signiture: Data) -> (r: BInt, s: BInt, v: BInt) {
+    public func calculateRSV(signiture: Data) -> (r: BigInt, s: BigInt, v: BigInt) {
         return calculateRSV(signature: signiture)
     }
 
-    public func calculateRSV(signature: Data) -> (r: BInt, s: BInt, v: BInt) {
+    public func calculateRSV(signature: Data) -> (r: BigInt, s: BigInt, v: BigInt) {
         return (
-            r: BInt(str: signature[..<32].toHexString(), radix: 16)!,
-            s: BInt(str: signature[32..<64].toHexString(), radix: 16)!,
-            v: BInt(signature[64]) + (chainID == 0 ? 27 : (35 + 2 * chainID))
+            r: BigInt(signature[..<32].toHexString(), radix: 16)!,
+            s: BigInt(signature[32..<64].toHexString(), radix: 16)!,
+            v: BigInt(signature[64]) + BigInt(chainID == 0 ? 27 : (35 + 2 * chainID))
         )
     }
 
-    public func calculateSignature(r: BInt, s: BInt, v: BInt) -> Data {
+    public func calculateSignature(r: BigInt, s: BigInt, v: BigInt) -> Data {
         let isOldSignitureScheme = [27, 28].contains(v)
-        let suffix = isOldSignitureScheme ? v - 27 : v - 35 - 2 * chainID
-        let sigHexStr = hex64Str(r) + hex64Str(s) + suffix.asString(withBase: 16)
+        let suffix = isOldSignitureScheme ? v - 27 : v - BigInt(35) - BigInt(2) * BigInt(chainID)
+        let sigHexStr = hex64Str(r) + hex64Str(s) + String(suffix, radix: 16)
         return Data(hex: sigHexStr)
     }
 
-    private func hex64Str(_ i: BInt) -> String {
-        let hex = i.asString(withBase: 16)
+    private func hex64Str(_ i: BigInt) -> String {
+        let hex = String(i, radix: 16)
         return String(repeating: "0", count: 64 - hex.count) + hex
     }
 }
