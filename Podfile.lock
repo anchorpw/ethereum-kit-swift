@@ -1,23 +1,31 @@
 PODS:
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
   - CryptoSwift (0.11.0)
   - EthereumKitSwift (0.1.0):
+    - BigInt (~> 3.1)
     - CryptoSwift (~> 0.11.0)
+  - SipHash (1.2.2)
 
 DEPENDENCIES:
   - EthereumKitSwift (from `./`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BigInt
     - CryptoSwift
+    - SipHash
 
 EXTERNAL SOURCES:
   EthereumKitSwift:
     :path: "./"
 
 SPEC CHECKSUMS:
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
-  EthereumKitSwift: fbbe8f3b0ae7832ed4c16f848a6b79f1dbc77a6c
+  EthereumKitSwift: 896a45910a0fe9ebf35da514e133feace0f3cb6b
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 07e4677472ae930e9ca45bfe168336dea07177cf
+PODFILE CHECKSUM: 50a8ccfb6ae7d3fd155ec7434d78f89b14165f2b
 
 COCOAPODS: 1.5.3
