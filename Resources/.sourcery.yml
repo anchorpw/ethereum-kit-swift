@@ -1,0 +1,7 @@
+sources:
+- ./
+- ../Resources/Templates/Templates.swift
+templates:
+- ../Resources/Templates
+output:
+  Generated

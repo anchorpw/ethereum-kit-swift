@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA12013206BFE800052AE8B /* CryptoTests.swift */; };
 		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
+		869994502136EB48008BD51A /* .sourcery.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8699944F2136EB48008BD51A /* .sourcery.yml */; };
+		869994522136EB59008BD51A /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869994512136EB59008BD51A /* Templates.swift */; };
+		86CA30DC2136F3630013A635 /* WordsListConvertible.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30DB2136F3620013A635 /* WordsListConvertible.stencil */; };
+		86CA30E62136F5E00013A635 /* korean.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30DE2136F5DF0013A635 /* korean.json */; };
+		86CA30E72136F5E00013A635 /* italian.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30DF2136F5DF0013A635 /* italian.json */; };
+		86CA30E82136F5E00013A635 /* spanish.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E02136F5DF0013A635 /* spanish.json */; };
+		86CA30E92136F5E00013A635 /* chinese_simplified.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E12136F5DF0013A635 /* chinese_simplified.json */; };
+		86CA30EA2136F5E00013A635 /* chinese_traditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E22136F5DF0013A635 /* chinese_traditional.json */; };
+		86CA30EB2136F5E00013A635 /* english.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E32136F5DF0013A635 /* english.json */; };
+		86CA30EC2136F5E00013A635 /* japanese.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E42136F5DF0013A635 /* japanese.json */; };
+		86CA30ED2136F5E00013A635 /* french.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA30E52136F5E00013A635 /* french.json */; };
+		86CA30F92136F69A0013A635 /* Spanish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F12136F6990013A635 /* Spanish.swift */; };
+		86CA30FA2136F69A0013A635 /* ChineseTraditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F22136F6990013A635 /* ChineseTraditional.swift */; };
+		86CA30FB2136F69A0013A635 /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F32136F6990013A635 /* Japanese.swift */; };
+		86CA30FC2136F69A0013A635 /* Italian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F42136F6990013A635 /* Italian.swift */; };
+		86CA30FD2136F69A0013A635 /* English.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F52136F69A0013A635 /* English.swift */; };
+		86CA30FE2136F69A0013A635 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F62136F69A0013A635 /* Korean.swift */; };
+		86CA30FF2136F69A0013A635 /* French.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F72136F69A0013A635 /* French.swift */; };
+		86CA31002136F69A0013A635 /* ChineseSimplified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA30F82136F69A0013A635 /* ChineseSimplified.swift */; };
+		86CA31022136F9420013A635 /* WordsListConvertible.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA31012136F9420013A635 /* WordsListConvertible.generated.swift */; };
 		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
 		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
 		AE005724204D852E007AA468 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005723204D852E007AA468 /* AddressTests.swift */; };
@@ -56,6 +76,26 @@
 		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		504FEF28AD5A1F70EEF5E513 /* Pods-CryptoEthereumSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoEthereumSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoEthereumSwift/Pods-CryptoEthereumSwift.release.xcconfig"; sourceTree = "<group>"; };
 		63C6430CD2E437FEBEFF1327 /* Pods-EthereumKitSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKitSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKitSwift/Pods-EthereumKitSwift.release.xcconfig"; sourceTree = "<group>"; };
+		8699944F2136EB48008BD51A /* .sourcery.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .sourcery.yml; sourceTree = "<group>"; };
+		869994512136EB59008BD51A /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
+		86CA30DB2136F3620013A635 /* WordsListConvertible.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WordsListConvertible.stencil; sourceTree = "<group>"; };
+		86CA30DE2136F5DF0013A635 /* korean.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = korean.json; sourceTree = "<group>"; };
+		86CA30DF2136F5DF0013A635 /* italian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = italian.json; sourceTree = "<group>"; };
+		86CA30E02136F5DF0013A635 /* spanish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spanish.json; sourceTree = "<group>"; };
+		86CA30E12136F5DF0013A635 /* chinese_simplified.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chinese_simplified.json; sourceTree = "<group>"; };
+		86CA30E22136F5DF0013A635 /* chinese_traditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chinese_traditional.json; sourceTree = "<group>"; };
+		86CA30E32136F5DF0013A635 /* english.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = english.json; sourceTree = "<group>"; };
+		86CA30E42136F5DF0013A635 /* japanese.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = japanese.json; sourceTree = "<group>"; };
+		86CA30E52136F5E00013A635 /* french.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = french.json; sourceTree = "<group>"; };
+		86CA30F12136F6990013A635 /* Spanish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spanish.swift; sourceTree = "<group>"; };
+		86CA30F22136F6990013A635 /* ChineseTraditional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseTraditional.swift; sourceTree = "<group>"; };
+		86CA30F32136F6990013A635 /* Japanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
+		86CA30F42136F6990013A635 /* Italian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Italian.swift; sourceTree = "<group>"; };
+		86CA30F52136F69A0013A635 /* English.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = English.swift; sourceTree = "<group>"; };
+		86CA30F62136F69A0013A635 /* Korean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Korean.swift; sourceTree = "<group>"; };
+		86CA30F72136F69A0013A635 /* French.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = French.swift; sourceTree = "<group>"; };
+		86CA30F82136F69A0013A635 /* ChineseSimplified.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseSimplified.swift; sourceTree = "<group>"; };
+		86CA31012136F9420013A635 /* WordsListConvertible.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsListConvertible.generated.swift; sourceTree = "<group>"; };
 		88A9121619A98D1C5DEC7C7D /* Pods_EthereumKitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C565589777A719A8E557A6 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4069DB87972D826B1B9C25B /* Pods_CryptoEthereumSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoEthereumSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +162,65 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8699944E2136EB27008BD51A /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				869994512136EB59008BD51A /* Templates.swift */,
+				86CA30DB2136F3620013A635 /* WordsListConvertible.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		869994532136EBA9008BD51A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				86CA31012136F9420013A635 /* WordsListConvertible.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		869994572136ED31008BD51A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8699944F2136EB48008BD51A /* .sourcery.yml */,
+				86CA30EE2136F5EB0013A635 /* WordStructures */,
+				86CA30DD2136F5880013A635 /* WordFiles */,
+				8699944E2136EB27008BD51A /* Templates */,
+				869994532136EBA9008BD51A /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		86CA30DD2136F5880013A635 /* WordFiles */ = {
+			isa = PBXGroup;
+			children = (
+				86CA30E12136F5DF0013A635 /* chinese_simplified.json */,
+				86CA30E22136F5DF0013A635 /* chinese_traditional.json */,
+				86CA30E32136F5DF0013A635 /* english.json */,
+				86CA30E52136F5E00013A635 /* french.json */,
+				86CA30DF2136F5DF0013A635 /* italian.json */,
+				86CA30E42136F5DF0013A635 /* japanese.json */,
+				86CA30DE2136F5DF0013A635 /* korean.json */,
+				86CA30E02136F5DF0013A635 /* spanish.json */,
+			);
+			path = WordFiles;
+			sourceTree = "<group>";
+		};
+		86CA30EE2136F5EB0013A635 /* WordStructures */ = {
+			isa = PBXGroup;
+			children = (
+				86CA30F82136F69A0013A635 /* ChineseSimplified.swift */,
+				86CA30F22136F6990013A635 /* ChineseTraditional.swift */,
+				86CA30F52136F69A0013A635 /* English.swift */,
+				86CA30F72136F69A0013A635 /* French.swift */,
+				86CA30F42136F6990013A635 /* Italian.swift */,
+				86CA30F32136F6990013A635 /* Japanese.swift */,
+				86CA30F62136F69A0013A635 /* Korean.swift */,
+				86CA30F12136F6990013A635 /* Spanish.swift */,
+			);
+			path = WordStructures;
+			sourceTree = "<group>";
+		};
 		9EC65C6845C23370E9809B2E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */,
+				869994572136ED31008BD51A /* Resources */,
 				AE90A0761FFA698D005ED7AF /* EthereumKitTests */,
 				AEBA90F11FFA2C6A003EA2BA /* Example */,
 				AEBA90D61FFA21ED003EA2BA /* Products */,
@@ -225,6 +325,7 @@
 			buildConfigurationList = AEBA90FF1FFA2C6A003EA2BA /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				E6CF3EC1960236A2CFC5F2E1 /* [CP] Check Pods Manifest.lock */,
+				869B985F2136EE8E000CC331 /* Sourcery */,
 				AEBA90EC1FFA2C6A003EA2BA /* Sources */,
 				AEBA90ED1FFA2C6A003EA2BA /* Frameworks */,
 				AEBA90EE1FFA2C6A003EA2BA /* Resources */,
@@ -291,9 +392,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CA30E72136F5E00013A635 /* italian.json in Resources */,
 				AEBA90FD1FFA2C6A003EA2BA /* LaunchScreen.storyboard in Resources */,
+				86CA30E82136F5E00013A635 /* spanish.json in Resources */,
+				86CA30EA2136F5E00013A635 /* chinese_traditional.json in Resources */,
+				86CA30EC2136F5E00013A635 /* japanese.json in Resources */,
+				86CA30ED2136F5E00013A635 /* french.json in Resources */,
+				86CA30E62136F5E00013A635 /* korean.json in Resources */,
 				AEBA90FA1FFA2C6A003EA2BA /* Assets.xcassets in Resources */,
+				86CA30DC2136F3630013A635 /* WordsListConvertible.stencil in Resources */,
 				AEBA90F81FFA2C6A003EA2BA /* Main.storyboard in Resources */,
+				86CA30E92136F5E00013A635 /* chinese_simplified.json in Resources */,
+				86CA30EB2136F5E00013A635 /* english.json in Resources */,
+				869994502136EB48008BD51A /* .sourcery.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +430,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		869B985F2136EE8E000CC331 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --config \"$SRCROOT/Resources\"";
 		};
 		E6CF3EC1960236A2CFC5F2E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -372,8 +497,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CA31022136F9420013A635 /* WordsListConvertible.generated.swift in Sources */,
+				86CA30FB2136F69A0013A635 /* Japanese.swift in Sources */,
 				AEBA90F51FFA2C6A003EA2BA /* ViewController.swift in Sources */,
+				86CA30FA2136F69A0013A635 /* ChineseTraditional.swift in Sources */,
+				86CA30FE2136F69A0013A635 /* Korean.swift in Sources */,
+				86CA31002136F69A0013A635 /* ChineseSimplified.swift in Sources */,
+				86CA30FC2136F69A0013A635 /* Italian.swift in Sources */,
+				86CA30F92136F69A0013A635 /* Spanish.swift in Sources */,
+				86CA30FF2136F69A0013A635 /* French.swift in Sources */,
+				86CA30FD2136F69A0013A635 /* English.swift in Sources */,
 				AEBA90F31FFA2C6A003EA2BA /* AppDelegate.swift in Sources */,
+				869994522136EB59008BD51A /* Templates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

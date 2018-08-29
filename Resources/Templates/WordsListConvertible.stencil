@@ -1,0 +1,28 @@
+// swiftlint:disable file_length
+import EthereumKitSwift
+
+fileprivate func readWords(fromFileWithName fileName: String) -> [String] {
+	guard
+		let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
+		let data = try? Data(contentsOf: url),
+		let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
+		let words = jsonObject as? [String] else {
+			return []
+		}
+	return words
+}
+
+public enum WordsList {
+{% for type in types.implementing.WordsListConvertible %}
+	case {{type.name|lowerFirstLetter}}
+{% endfor %}
+
+	public var words: [String] {
+		switch self {
+		{% for type in types.implementing.WordsListConvertible %}
+        case .{{type.name|lowerFirstLetter}}:
+			return readWords(fromFileWithName: {{type.name}}.fileName)
+		{% endfor %}
+		}
+	}
+}

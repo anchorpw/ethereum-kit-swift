@@ -2,6 +2,8 @@ PODS:
   - CryptoSwift (0.11.0)
   - EthereumKitSwift (0.1.0):
     - CryptoSwift (~> 0.11.0)
+    - Sourcery (~> 0.13.0)
+  - Sourcery (0.13.1)
 
 DEPENDENCIES:
   - EthereumKitSwift (from `./`)
@@ -9,6 +11,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CryptoSwift
+    - Sourcery
 
 EXTERNAL SOURCES:
   EthereumKitSwift:
@@ -16,7 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
-  EthereumKitSwift: fbbe8f3b0ae7832ed4c16f848a6b79f1dbc77a6c
+  EthereumKitSwift: bda95ca3ff32fa57bdfb457c5b3368ae658890c5
+  Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
 
 PODFILE CHECKSUM: 07e4677472ae930e9ca45bfe168336dea07177cf
 
