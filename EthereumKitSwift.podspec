@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.source_files = 'EthereumKitSwift/**/*.{swift,h,m}'
   s.dependency 'CryptoSwift', '~> 0.11.0'
   s.dependency 'BigInt', '~> 3.1'
+  s.dependency 'libscrypt', '~> 1.21'
   s.module_map = 'EthereumKitSwift.modulemap'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PROJECT_DIR}/../Libraries/openssl/include ${PROJECT_DIR}/../Libraries/secp256k1/include',
                  'LIBRARY_SEARCH_PATHS' => '${PROJECT_DIR}/../Libraries/openssl/lib ${PROJECT_DIR}/../Libraries/secp256k1/lib',

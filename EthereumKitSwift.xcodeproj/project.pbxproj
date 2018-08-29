@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA12013206BFE800052AE8B /* CryptoTests.swift */; };
 		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
+		2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4B0EB2137323800C30350 /* ScryptTests.swift */; };
 		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
 		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
 		AE005724204D852E007AA468 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005723204D852E007AA468 /* AddressTests.swift */; };
@@ -55,6 +56,7 @@
 		2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2CD4B0EB2137323800C30350 /* ScryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryptTests.swift; sourceTree = "<group>"; };
 		504FEF28AD5A1F70EEF5E513 /* Pods-CryptoEthereumSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoEthereumSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoEthereumSwift/Pods-CryptoEthereumSwift.release.xcconfig"; sourceTree = "<group>"; };
 		58A94EBAD61580140B41B949 /* Pods_EthereumKitSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKitSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C6430CD2E437FEBEFF1327 /* Pods-EthereumKitSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKitSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKitSwift/Pods-EthereumKitSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		AE90A0761FFA698D005ED7AF /* EthereumKitSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				2CD4B0EB2137323800C30350 /* ScryptTests.swift */,
 				AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */,
 				AE53C96B20D4CF1C00714EF4 /* NetworkTests.swift */,
 				0AA12013206BFE800052AE8B /* CryptoTests.swift */,
@@ -320,6 +323,7 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/EthereumKitSwift/EthereumKitSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/libscrypt/libscrypt.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -327,6 +331,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumKitSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libscrypt.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -389,6 +394,7 @@
 				AE5EE9C120DB8615007F9D72 /* RawTransactionTests.swift in Sources */,
 				AE1F8C21208CDA0C0088A043 /* MessageSigningTests.swift in Sources */,
 				AE1270E920E8B1CA00487956 /* HDPublicKeyTests.swift in Sources */,
+				2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */,
 				AE5EE9BF20DB84C2007F9D72 /* BlockParameterTests.swift in Sources */,
 				AE5EE9BD20DB8425007F9D72 /* BalanceTests.swift in Sources */,
 				AE3EB60720AC941A00D61CE6 /* ERC20Tests.swift in Sources */,
