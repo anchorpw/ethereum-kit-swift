@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA12013206BFE800052AE8B /* CryptoTests.swift */; };
 		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
+		2C2D0C9D21383FEE00742A83 /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0C9C21383FEE00742A83 /* WordListTests.swift */; };
 		2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4B0EB2137323800C30350 /* ScryptTests.swift */; };
-		2C2D0C9B21383A4800742A83 /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0C9A21383A4800742A83 /* WordListTests.swift */; };
 		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
 		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
 		AE005724204D852E007AA468 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005723204D852E007AA468 /* AddressTests.swift */; };
@@ -55,7 +55,7 @@
 		1A371099205052C1003A40BB /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		2127CE539639DE0898138A4A /* Pods-EthereumKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.debug.xcconfig"; sourceTree = "<group>"; };
 		2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		2C2D0C9A21383A4800742A83 /* WordListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListTests.swift; sourceTree = "<group>"; };
+		2C2D0C9C21383FEE00742A83 /* WordListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListTests.swift; sourceTree = "<group>"; };
 		2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2CD4B0EB2137323800C30350 /* ScryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryptTests.swift; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		AE90A0761FFA698D005ED7AF /* EthereumKitSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C2D0C9C21383FEE00742A83 /* WordListTests.swift */,
 				2CD4B0EB2137323800C30350 /* ScryptTests.swift */,
-				2C2D0C9A21383A4800742A83 /* WordListTests.swift */,
 				AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */,
 				AE53C96B20D4CF1C00714EF4 /* NetworkTests.swift */,
 				0AA12013206BFE800052AE8B /* CryptoTests.swift */,
@@ -403,6 +403,7 @@
 				AE3EB60720AC941A00D61CE6 /* ERC20Tests.swift in Sources */,
 				AE90A0781FFA698D005ED7AF /* EthereumKitTests.swift in Sources */,
 				AE005724204D852E007AA468 /* AddressTests.swift in Sources */,
+				2C2D0C9D21383FEE00742A83 /* WordListTests.swift in Sources */,
 				1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */,
 				AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */,
 			);
@@ -414,7 +415,6 @@
 			files = (
 				AEBA90F51FFA2C6A003EA2BA /* ViewController.swift in Sources */,
 				AEBA90F31FFA2C6A003EA2BA /* AppDelegate.swift in Sources */,
-				2C2D0C9B21383A4800742A83 /* WordListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

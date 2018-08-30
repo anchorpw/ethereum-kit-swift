@@ -19,7 +19,7 @@ public final class Mnemonic {
         let hashBits = String(entropy.sha256().flatMap { ("00000000" + String($0, radix: 2)).suffix(8) })
         let checkSum = String(hashBits.prefix((entropy.count * 8) / 32))
         
-        let words = language.words()
+        let words = language.words
         let concatenatedBits = entropybits + checkSum
         
         var mnemonic: [String] = []
@@ -34,7 +34,7 @@ public final class Mnemonic {
     }
     
     public static func createSeed(mnemonic: [String], withPassphrase passphrase: String = "") throws -> Data {
-        let words = WordList.english.words() + WordList.japanese.words()
+        let words = WordList.english.words + WordList.japanese.words
         guard !mnemonic.map({ words.contains($0) }).contains(false) else {
             throw EthereumKitError.cryptoError(.invalidMnemonic)
         }
