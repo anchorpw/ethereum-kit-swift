@@ -10,6 +10,7 @@
 		0AA12014206BFE800052AE8B /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA12013206BFE800052AE8B /* CryptoTests.swift */; };
 		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
 		2C2D0C9D21383FEE00742A83 /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0C9C21383FEE00742A83 /* WordListTests.swift */; };
+		2C2D0CA22138572C00742A83 /* KeystoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0CA12138572C00742A83 /* KeystoreTests.swift */; };
 		2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4B0EB2137323800C30350 /* ScryptTests.swift */; };
 		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
 		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
@@ -56,6 +57,7 @@
 		2127CE539639DE0898138A4A /* Pods-EthereumKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.debug.xcconfig"; sourceTree = "<group>"; };
 		2A96D13BDDDBE403128DC41B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		2C2D0C9C21383FEE00742A83 /* WordListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListTests.swift; sourceTree = "<group>"; };
+		2C2D0CA12138572C00742A83 /* KeystoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeystoreTests.swift; sourceTree = "<group>"; };
 		2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2CD4B0EB2137323800C30350 /* ScryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryptTests.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		AE90A0761FFA698D005ED7AF /* EthereumKitSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C2D0CA12138572C00742A83 /* KeystoreTests.swift */,
 				2C2D0C9C21383FEE00742A83 /* WordListTests.swift */,
 				2CD4B0EB2137323800C30350 /* ScryptTests.swift */,
 				AE90A0771FFA698D005ED7AF /* EthereumKitTests.swift */,
@@ -262,7 +265,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = yuzushioh;
+				ORGANIZATIONNAME = Anchor.pw;
 				TargetAttributes = {
 					AE90A0741FFA698D005ED7AF = {
 						CreatedOnToolsVersion = 9.2;
@@ -397,6 +400,7 @@
 				AE5EE9C120DB8615007F9D72 /* RawTransactionTests.swift in Sources */,
 				AE1F8C21208CDA0C0088A043 /* MessageSigningTests.swift in Sources */,
 				AE1270E920E8B1CA00487956 /* HDPublicKeyTests.swift in Sources */,
+				2C2D0CA22138572C00742A83 /* KeystoreTests.swift in Sources */,
 				2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */,
 				AE5EE9BF20DB84C2007F9D72 /* BlockParameterTests.swift in Sources */,
 				AE5EE9BD20DB8425007F9D72 /* BalanceTests.swift in Sources */,
