@@ -1,5 +1,5 @@
 import XCTest
-@testable import EthereumKit
+@testable import EthereumKitSwift
 
 class CryptoTests: XCTestCase {
     func testValidatesSignature() {

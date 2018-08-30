@@ -1,4 +1,5 @@
 import CryptoSwift
+import BigInt
 
 /// ERC20 contains necessary method to support ERC20 tokens
 public struct ERC20 {
@@ -57,7 +58,7 @@ public struct ERC20 {
     /// - Parameter:
     ///    - amount: amount in string format
     /// - Returns: BigInt value powered by (10 * decimal)
-    private func power(amount: String) throws -> BInt {
+    private func power(amount: String) throws -> BigUInt {
         let components = amount.split(separator: ".")
         
         // components.count must be 1 or 2. this method accepts only integer or decimal value
@@ -66,11 +67,11 @@ public struct ERC20 {
             throw EthereumKitError.contractError(.containsInvalidCharactor(amount))
         }
         
-        guard let integer = BInt(String(components[0]), radix: 10) else {
+        guard let integer = BigUInt(String(components[0]), radix: 10) else {
             throw EthereumKitError.contractError(.containsInvalidCharactor(amount))
         }
         
-        let poweredInteger = integer * (BInt(10) ** decimal)
+        let poweredInteger = integer * (BigUInt(10).power(decimal))
         
         if components.count == 2 {
             let count = components[1].count
@@ -79,11 +80,11 @@ public struct ERC20 {
                 throw EthereumKitError.contractError(.invalidDecimalValue(amount))
             }
             
-            guard let digit = BInt(String(components[1]), radix: 10) else {
+            guard let digit = BigUInt(String(components[1]), radix: 10) else {
                 throw EthereumKitError.contractError(.containsInvalidCharactor(amount))
             }
             
-            let poweredDigit = digit * (BInt(10) ** (decimal - count))
+            let poweredDigit = digit * (BigUInt(10).power(decimal - count))
             return poweredInteger + poweredDigit
         } else {
             return poweredInteger

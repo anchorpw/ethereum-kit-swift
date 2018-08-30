@@ -1,3 +1,5 @@
+import BigInt
+
 public struct RLP {
     public static func encode(_ element: Any) throws -> Data {
         let encoded: Data?
@@ -6,11 +8,14 @@ public struct RLP {
         case let list as [Any]:
             encoded = try encode(elements: list)
         
-        case let bint as BInt:
-            encoded = encode(bint: bint)
-        
-        case let int as Int:
-            encoded = encode(bint: BInt(int))
+        case let biguint as BigUInt:
+            encoded = encode(bigUInt: biguint)
+            
+        case let bigint as BigInt where bigint >= 0:
+            encoded = encode(bigUInt: BigUInt(bigint))
+            
+        case let int as Int where int >= 0:
+            encoded = encode(bigUInt: BigUInt(int))
         
         case let data as Data:
             encoded = encode(data: data)
@@ -46,8 +51,8 @@ public struct RLP {
         return encode(data: data)
     }
     
-    private static func encode(bint: BInt) -> Data? {
-        let data = bint.serialize()
+    private static func encode(bigUInt: BigUInt) -> Data? {
+        let data = bigUInt.serialize()
         if data.isEmpty {
             return Data(bytes: [0x80])
         }

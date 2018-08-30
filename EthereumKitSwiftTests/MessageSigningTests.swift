@@ -1,6 +1,6 @@
 import XCTest
 import CryptoSwift
-@testable import EthereumKit
+@testable import EthereumKitSwift
 
 final class MessageSigningTests: XCTestCase {
     

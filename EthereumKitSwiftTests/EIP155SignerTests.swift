@@ -1,5 +1,6 @@
 import XCTest
-@testable import EthereumKit
+@testable import EthereumKitSwift
+import BigInt
 
 class EIP155SignerTests: XCTestCase {
 
@@ -19,12 +20,12 @@ class EIP155SignerTests: XCTestCase {
     func testGeneratingRSVOnTestnet1() {
         let signer = EIP155Signer(chainID: 3)
         let (r, s, v) = signer.calculateRSV(signature: Fixture.signature)
-        XCTAssertEqual(r, BInt("18515461264373351373200002665853028612451056578545711640558177340181847433846")!)
-        XCTAssertEqual(s, BInt("46948507304638947509940763649030358759909902576025900602547168820602576006531")!)
-        XCTAssertEqual(v, BInt(41))
-        XCTAssertEqual(r.asString(withBase: 16), "28ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276")
-        XCTAssertEqual(s.asString(withBase: 16), "67cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d83")
-        XCTAssertEqual(v.asString(withBase: 16), "29")
+        XCTAssertEqual(r, BigInt("18515461264373351373200002665853028612451056578545711640558177340181847433846")!)
+        XCTAssertEqual(s, BigInt("46948507304638947509940763649030358759909902576025900602547168820602576006531")!)
+        XCTAssertEqual(v, BigInt(41))
+        XCTAssertEqual(String(r, radix: 16), "28ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276")
+        XCTAssertEqual(String(s, radix: 16), "67cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d83")
+        XCTAssertEqual(String(v, radix: 16), "29")
         let restoredSignature = signer.calculateSignature(r: r, s: s, v: v)
         XCTAssertEqual(Fixture.signature, restoredSignature)
     }
@@ -33,9 +34,9 @@ class EIP155SignerTests: XCTestCase {
         let signiture = Data(hex: "5e7e818d4ca60295c42f0fab371e8a0409cb5080ba958a67d8d31cdcf18ae50b21fe08e591cb6d5f75d4a443818fdc3ee324f0599253cfd1f5b5c7ac17d0c73a00")
         let signer = EIP155Signer(chainID: 3)
         let (r, s, v) = signer.calculateRSV(signature: signiture)
-        XCTAssertEqual(r.asString(withBase: 16), "5e7e818d4ca60295c42f0fab371e8a0409cb5080ba958a67d8d31cdcf18ae50b")
-        XCTAssertEqual(s.asString(withBase: 16), "21fe08e591cb6d5f75d4a443818fdc3ee324f0599253cfd1f5b5c7ac17d0c73a")
-        XCTAssertEqual(v.asString(withBase: 16), "29")
+        XCTAssertEqual(String(r, radix: 16), "5e7e818d4ca60295c42f0fab371e8a0409cb5080ba958a67d8d31cdcf18ae50b")
+        XCTAssertEqual(String(s, radix: 16), "21fe08e591cb6d5f75d4a443818fdc3ee324f0599253cfd1f5b5c7ac17d0c73a")
+        XCTAssertEqual(String(v, radix: 16), "29")
         let restoredSignature = signer.calculateSignature(r: r, s: s, v: v)
         XCTAssertEqual(signiture, restoredSignature)
     }
@@ -43,9 +44,9 @@ class EIP155SignerTests: XCTestCase {
     func testGeneratingRSVOnMainnet() {
         let signer = EIP155Signer(chainID: 1)
         let (r, s, v) = signer.calculateRSV(signature: Fixture.signature)
-        XCTAssertEqual(r, BInt("18515461264373351373200002665853028612451056578545711640558177340181847433846")!)
-        XCTAssertEqual(s, BInt("46948507304638947509940763649030358759909902576025900602547168820602576006531")!)
-        XCTAssertEqual(v, BInt(37))
+        XCTAssertEqual(r, BigInt("18515461264373351373200002665853028612451056578545711640558177340181847433846")!)
+        XCTAssertEqual(s, BigInt("46948507304638947509940763649030358759909902576025900602547168820602576006531")!)
+        XCTAssertEqual(v, BigInt(37))
         let restoredSignature = signer.calculateSignature(r: r, s: s, v: v)
         XCTAssertEqual(Fixture.signature, restoredSignature)
     }
@@ -55,7 +56,7 @@ class EIP155SignerTests: XCTestCase {
         let r = "75119860711638973245538703589762310947594328712729260330312782656531560398776"
         let s = "51392727032514077370236468627319183981033698696331563950328005524752791633785"
         let signer = EIP155Signer(chainID: 1)
-        let signature = signer.calculateSignature(r: BInt(r)!, s: BInt(s)!, v: BInt(v))
+        let signature = signer.calculateSignature(r: BigInt(r)!, s: BigInt(s)!, v: BigInt(v))
         XCTAssertEqual(signature.toHexString(), "a614559de76862bb1dbf8a969d8979e5bf21b72c51c96b27b3d247b728ebffb8719f40b018940ffd0880285d2196cdd31a710bf7cdda60c77632743d687dff7900")
     }
 
@@ -64,15 +65,15 @@ class EIP155SignerTests: XCTestCase {
         let r = "79425995431864040500581522255237765710685762616259654871112297909982135982384"
         let s = "1777326029228985739367131500591267170048497362640342741198949880105318675913"
         let signer = EIP155Signer(chainID: 1)
-        let signature = signer.calculateSignature(r: BInt(r)!, s: BInt(s)!, v: BInt(v))
+        let signature = signer.calculateSignature(r: BigInt(r)!, s: BigInt(s)!, v: BigInt(v))
         XCTAssertEqual(signature.toHexString(), "af998533cdac5d64594f462871a8ba79fe41d59295e39db3f069434c9862193003edee4e64d899a2c57bd726e972bb6fdb354e3abcd5846e2315ecfec332f5c900")
     }
 
     func testGeneratingRSVForAnyChain() {
         let signer = EIP155Signer(chainID: 0)
         let rsv = signer.calculateRSV(signature: Fixture.signature)
-        XCTAssertEqual(rsv.r.asString(withBase: 10), "18515461264373351373200002665853028612451056578545711640558177340181847433846")
-        XCTAssertEqual(rsv.s.asString(withBase: 10), "46948507304638947509940763649030358759909902576025900602547168820602576006531")
+        XCTAssertEqual(String(rsv.r, radix: 10), "18515461264373351373200002665853028612451056578545711640558177340181847433846")
+        XCTAssertEqual(String(rsv.s, radix: 10), "46948507304638947509940763649030358759909902576025900602547168820602576006531")
         XCTAssertEqual(rsv.v, 27)
     }
 

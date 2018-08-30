@@ -1,6 +1,8 @@
+import BigInt
+
 // Online Converter: https://etherconverter.online
 public typealias Ether = Decimal
-public typealias Wei = BInt
+public typealias Wei = BigInt
 
 public final class Converter {
     
