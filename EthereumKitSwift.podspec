@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.source_files = 'EthereumKitSwift/**/*.{swift,h,m}'
   s.dependency 'CryptoSwift', '~> 0.11.0'
-  s.dependency 'Sourcery', '~> 0.13.0'
+  s.resources = ['EthereumKitSwift/**/*.json']
   s.module_map = 'EthereumKitSwift.modulemap'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PROJECT_DIR}/../Libraries/openssl/include ${PROJECT_DIR}/../Libraries/secp256k1/include',
                  'LIBRARY_SEARCH_PATHS' => '${PROJECT_DIR}/../Libraries/openssl/lib ${PROJECT_DIR}/../Libraries/secp256k1/lib',
