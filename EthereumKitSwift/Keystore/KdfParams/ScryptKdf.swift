@@ -9,9 +9,9 @@ import Foundation
 
 struct ScryptKdf: Codable {
     var dklen: Int
-    var n: Int
-    var r: Int
-    var p: Int
+    var n: UInt64
+    var r: UInt32
+    var p: UInt32
     var salt: String
 }
 
@@ -21,9 +21,9 @@ extension ScryptKdf {
         let scrypt = try Scrypt.scrypt(
             password: password,
             salt: Data(hex: salt),
-            N: UInt64(n),
-            r: UInt32(r),
-            p: UInt32(p),
+            N: n,
+            r: r,
+            p: p,
             dkLen: dklen)
         return scrypt
     }
