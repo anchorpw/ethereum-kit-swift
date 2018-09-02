@@ -6,5 +6,6 @@ target 'Example' do
     
     target 'EthereumKitSwiftTests' do
         inherit! :search_paths
+        pod 'Nimble'
     end
 end

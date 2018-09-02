@@ -5,105 +5,107 @@
 //  Created by Dmitriy Karachentsov on 30/8/18.
 //
 
-public final class Keystore {
-
-    public var publicKey: PublicKey!
+public final class Keystore: Decodable {
     
-    private var crypto: KeystoreCrypto!
+    public var version: Int
+    public var identifier: String
+    public var address: String?
+    private var crypto: KeystoreCrypto
     
-    init(url: URL) {
-        
+    enum KeystoreError: Error {
+        case cryptoNotFound
     }
     
-    init(privateKey: Data, passphrase: String) {
-        
+    private enum CodingKeys: String, CodingKey {
+        case version
+        case identifier = "id"
+        case address
+        case crypto
+        case Crypto
     }
     
-    class func create(network: Network = .mainnet, passphrase: String) -> Keystore {
+    static func keystore(url: URL) throws -> Keystore {
+        let data = try Data(contentsOf: url)
+        return try keystore(rawData: data)
+    }
+    
+    static func keystore(rawData data: Data) throws -> Keystore {
+        let decoder = JSONDecoder()
+        let keystore = try decoder.decode(Keystore.self, from: data)
+        return keystore
+    }
+    
+    init(privateKey: Data, passphrase: String) throws {
+        let password = passphrase.toData()
+        crypto = try Keystore.crypto(
+            fromPrivateKey: privateKey,
+            password: password)
+        let key = PrivateKey(raw: privateKey)
+        let publicKey = key.publicKey
+        address = publicKey.address()
+        let uuid = UUID()
+        identifier = uuid.uuidString.lowercased()
+        version = 3
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        guard let crypto =
+            (try? container.decode(KeystoreCrypto.self, forKey: .Crypto)) ??
+            (try? container.decode(KeystoreCrypto.self, forKey: .crypto)) else {
+                throw KeystoreError.cryptoNotFound
+        }
+        self.crypto = crypto
+        address = try? container.decode(String.self, forKey: .address)
+        identifier = try container.decode(String.self, forKey: .identifier)
+        version = try container.decode(Int.self, forKey: .version)
+    }
+    
+    
+    class func create(
+        network: Network = .mainnet,
+        passphrase: String) throws -> Keystore {
         let mnemonic = Mnemonic.create()
         let seed = try! Mnemonic.createSeed(mnemonic: mnemonic)
         let wallet = try! Wallet(seed: seed, network: network, debugPrints: true)
         let privateKey = wallet.privateKey()
-        return Keystore(
+        return try Keystore(
             privateKey: privateKey,
             passphrase: passphrase)
     }
     
-    func privateKey(passphrase: String) -> Data {
-        return Data()
+    func privateKey(passphrase: String) throws -> PrivateKey {
+        let password = passphrase.toData()
+        let data = try crypto.privateKey(password: password)
+        return PrivateKey(raw: data)
     }
     
-    func raw() -> Data {
-        return Data()
+    func raw() throws -> Data {
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(self)
+        return data
     }
     
-    private static func crypto(fromPrivateKey privateKey: Data) -> KeystoreCrypto {
-        return KeystoreCrypto()
-    }
-    
-    private static func crypto(fromRaw raw: Data) -> KeystoreCrypto {
-        return KeystoreCrypto()
-    }
-    
-}
-
-protocol Kdf {
-    var params: [String: Any] { get }
-}
-
-protocol Cipher {
-    var params: [String: Any] { get }
-}
-
-private final class ScryptKdf: Kdf {
-    
-    var salt: Data
-    var n: Int
-    var r: Int
-    var p: Int
-    var dkLen: Int
-    
-    var params: [String : Any] {
-        return [:]
-    }
-    
-    init(salt: Data, n: Int, r: Int, p: Int, dkLen: Int) {
-        self.salt = salt
-        self.n = n
-        self.r = r
-        self.p = p
-        self.dkLen = dkLen
+    private static func crypto(
+        fromPrivateKey privateKey: Data,
+        password: Data)
+        throws -> KeystoreCrypto {
+        return try KeystoreCrypto(
+            privateKey: privateKey,
+            password: password)
     }
     
 }
 
-private final class Aes128CtrCipher {
-    
-    var ciphertext: Data
-    var cipherIv: Data
-    
-    var params: [String : Any] {
-        return [:]
+extension Keystore: Encodable {
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(crypto, forKey: .Crypto)
+        try container.encodeIfPresent(address, forKey: .address)
+        try container.encode(identifier, forKey: .identifier)
+        try container.encode(version, forKey: .version)
     }
     
-    init(ciphertext: Data, cipherIv: Data) {
-        self.ciphertext = ciphertext
-        self.cipherIv = cipherIv
-    }
 }
 
-private final class KeystoreCrypto {
-    
-    enum CipherType: String {
-        case aes128ctr = "aes-128-ctr"
-    }
-    
-    enum KdfType: String {
-        case scrypt = "scrypt"
-    }
-    
-    var cipherType: CipherType = .aes128ctr
-    
-    var kdfType: KdfType = .scrypt
-    
-}

@@ -1,6 +1,6 @@
 //
 //  Scrypt.swift
-//  BigInt
+//  EthereumKitSwift
 //
 //  Created by Dmitriy Karachentsov on 29/8/18.
 //

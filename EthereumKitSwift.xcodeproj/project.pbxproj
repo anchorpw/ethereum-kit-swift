@@ -11,6 +11,9 @@
 		1A37109A205052C1003A40BB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A371099205052C1003A40BB /* ConverterTests.swift */; };
 		2C2D0C9D21383FEE00742A83 /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0C9C21383FEE00742A83 /* WordListTests.swift */; };
 		2C2D0CA22138572C00742A83 /* KeystoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D0CA12138572C00742A83 /* KeystoreTests.swift */; };
+		2CC10999213B4C26008A6AB1 /* keystore2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CC10997213B4C26008A6AB1 /* keystore2.json */; };
+		2CC1099A213B4C26008A6AB1 /* keystore1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CC10998213B4C26008A6AB1 /* keystore1.json */; };
+		2CC109B0213C4CC1008A6AB1 /* pbkdf2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CC109AF213C4CC1008A6AB1 /* pbkdf2.json */; };
 		2CD4B0EC2137323800C30350 /* ScryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4B0EB2137323800C30350 /* ScryptTests.swift */; };
 		AE005720204D7D59007AA468 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00571F204D7D59007AA468 /* RLPTests.swift */; };
 		AE005722204D82A1007AA468 /* EIP155SignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE005721204D82A1007AA468 /* EIP155SignerTests.swift */; };
@@ -60,6 +63,9 @@
 		2C2D0CA12138572C00742A83 /* KeystoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeystoreTests.swift; sourceTree = "<group>"; };
 		2C2E1E0A2135F3EA00166A6F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2E1E132135FA8300166A6F /* EthereumKitSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EthereumKitSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2CC10997213B4C26008A6AB1 /* keystore2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keystore2.json; sourceTree = "<group>"; };
+		2CC10998213B4C26008A6AB1 /* keystore1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keystore1.json; sourceTree = "<group>"; };
+		2CC109AF213C4CC1008A6AB1 /* pbkdf2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pbkdf2.json; sourceTree = "<group>"; };
 		2CD4B0EB2137323800C30350 /* ScryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryptTests.swift; sourceTree = "<group>"; };
 		504FEF28AD5A1F70EEF5E513 /* Pods-CryptoEthereumSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoEthereumSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoEthereumSwift/Pods-CryptoEthereumSwift.release.xcconfig"; sourceTree = "<group>"; };
 		58A94EBAD61580140B41B949 /* Pods_EthereumKitSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKitSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CC10996213B4C26008A6AB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CC109AF213C4CC1008A6AB1 /* pbkdf2.json */,
+				2CC10998213B4C26008A6AB1 /* keystore1.json */,
+				2CC10997213B4C26008A6AB1 /* keystore2.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6FF65CA544CE0A0023C563F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +193,7 @@
 				AE5EE9C220DB86E7007F9D72 /* TransactionTests.swift */,
 				AE4B2E8620EB5DF60080F3EA /* BIP32Tests.swift */,
 				AE5EE9C420DB882F007F9D72 /* SentTransactionTests.swift */,
+				2CC10996213B4C26008A6AB1 /* Resources */,
 				AE90A0791FFA698D005ED7AF /* Info.plist */,
 			);
 			path = EthereumKitSwiftTests;
@@ -227,6 +244,7 @@
 				AE90A0711FFA698D005ED7AF /* Sources */,
 				AE90A0721FFA698D005ED7AF /* Frameworks */,
 				AE90A0731FFA698D005ED7AF /* Resources */,
+				C878BCA31A2A7C38E39E023D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC10999213B4C26008A6AB1 /* keystore2.json in Resources */,
+				2CC109B0213C4CC1008A6AB1 /* pbkdf2.json in Resources */,
+				2CC1099A213B4C26008A6AB1 /* keystore1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +381,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C878BCA31A2A7C38E39E023D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EthereumKitSwiftTests/Pods-EthereumKitSwiftTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EthereumKitSwiftTests/Pods-EthereumKitSwiftTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E6CF3EC1960236A2CFC5F2E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -458,14 +497,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/crypto/include";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = EthereumKitSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.EthereumKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -481,14 +518,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/crypto/include";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = EthereumKitSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.EthereumKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -630,11 +665,14 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anchor.kit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -649,11 +687,14 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anchor.kit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
