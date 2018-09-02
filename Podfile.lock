@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
-  EthereumKitSwift: fa2ced2169c2e048e34e52448c650dd01cdfacf7
+  EthereumKitSwift: 6bce3820f074289a9ef0579810ffb83d640baf47
   libscrypt: bc086c70477013b618f25655cd6dc80e45823a8e
   Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
