@@ -15,15 +15,16 @@ Pod::Spec.new do |s|
   s.author           = { 'ne0nx' => 'd.karachentsov@gmail.com' }
   s.source           = { :git => 'https://github.com/anchorpw/ethereum-kit-swift', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
-  s.source_files = 'EthereumKitSwift/**/*.{swift,h,m}', 'Libraries/**/*{.h}'
-  s.resources = ['EthereumKitSwift/**/*.json']
+  s.source_files = 'EthereumKitSwift/Sources/**/*.{swift,h,m}'
+  s.resources = ['EthereumKitSwift/Resources/**/*.json']
   s.dependency 'CryptoSwift', '~> 0.11.0'
   s.dependency 'BigInt', '~> 3.1'
   s.dependency 'libscrypt', '~> 1.21'
   s.module_map = 'EthereumKitSwift.modulemap'
-  s.vendored_libraries = 'Libraries/**/*.a'
-  s.public_header_files = 'Libraries/**/*{.h}'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/../Libraries/openssl/include ${PODS_ROOT}/../Libraries/secp256k1/include',
-      'SWIFT_INCLUDE_PATHS' => '${PODS_ROOT}/../Libraries'
+  s.vendored_libraries = 'EthereumKitSwift/Libraries/**/*.a'
+  s.preserve_paths = 'EthereumKitSwift/Libraries/**/*.{h,modulemap}'
+  s.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '${PODS_TARGET_SRCROOT}/EthereumKitSwift/Libraries/openssl/include ${PODS_TARGET_SRCROOT}/EthereumKitSwift/Libraries/secp256k1/include',
+      'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/EthereumKitSwift/Libraries'
   }
 end
