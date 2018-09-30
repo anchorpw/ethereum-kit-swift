@@ -24,18 +24,18 @@ public final class Keystore: Decodable {
         case Crypto
     }
     
-    static func keystore(url: URL) throws -> Keystore {
+    public static func keystore(url: URL) throws -> Keystore {
         let data = try Data(contentsOf: url)
         return try keystore(rawData: data)
     }
     
-    static func keystore(rawData data: Data) throws -> Keystore {
+    public static func keystore(rawData data: Data) throws -> Keystore {
         let decoder = JSONDecoder()
         let keystore = try decoder.decode(Keystore.self, from: data)
         return keystore
     }
     
-    init(privateKey: Data, passphrase: String) throws {
+    public init(privateKey: Data, passphrase: String) throws {
         let password = passphrase.toData()
         crypto = try Keystore.crypto(
             fromPrivateKey: privateKey,
@@ -61,11 +61,10 @@ public final class Keystore: Decodable {
         version = try container.decode(Int.self, forKey: .version)
     }
     
-    
-    class func create(
+    public class func create(
         network: Network = .mainnet,
+        mnemonic: [String] = Mnemonic.create(),
         passphrase: String) throws -> Keystore {
-        let mnemonic = Mnemonic.create()
         let seed = try! Mnemonic.createSeed(mnemonic: mnemonic)
         let wallet = try! Wallet(seed: seed, network: network, debugPrints: true)
         let privateKey = wallet.privateKey()
@@ -74,13 +73,13 @@ public final class Keystore: Decodable {
             passphrase: passphrase)
     }
     
-    func privateKey(passphrase: String) throws -> PrivateKey {
+    public func privateKey(passphrase: String) throws -> PrivateKey {
         let password = passphrase.toData()
         let data = try crypto.privateKey(password: password)
         return PrivateKey(raw: data)
     }
     
-    func raw() throws -> Data {
+    public func raw() throws -> Data {
         let encoder = JSONEncoder()
         let data = try encoder.encode(self)
         return data
