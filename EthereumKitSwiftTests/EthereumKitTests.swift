@@ -2,23 +2,31 @@ import XCTest
 @testable import EthereumKitSwift
 
 class EthereumKitTests: XCTestCase {
-    func testMenmonic() {
+    
+    func testMenmonic1() {
         let entropy = Data(hex: "000102030405060708090a0b0c0d0e0f")
-        let mnemonic = Mnemonic.create(entropy: entropy)
-        XCTAssertEqual(
-            mnemonic.joined(separator: " "),
-            "abandon amount liar amount expire adjust cage candy arch gather drum buyer"
-        )
-        
-        let entropy2 = Data(hex: "a26a4821e36c7f7dccaa5484c080cefa")
-        let mnemonic2 = Mnemonic.create(entropy: entropy2)
-        XCTAssertEqual(
-            mnemonic2.joined(separator: " "),
-            "pen false anchor short side same crawl enhance luggage advice crisp village"
-        )
+        measure {
+            let mnemonic = Mnemonic.create(entropy: entropy)
+            XCTAssertEqual(
+                mnemonic.joined(separator: " "),
+                "abandon amount liar amount expire adjust cage candy arch gather drum buyer"
+            )
+        }
     }
     
-    func testSeedGeneration() {
+    func testMenmonic2() {
+        let entropy2 = Data(hex: "a26a4821e36c7f7dccaa5484c080cefa")
+        
+        measure {
+            let mnemonic2 = Mnemonic.create(entropy: entropy2)
+            XCTAssertEqual(
+                mnemonic2.joined(separator: " "),
+                "pen false anchor short side same crawl enhance luggage advice crisp village"
+            )
+        }
+    }
+    
+    func testSeedGeneration1() {
         let entropy = Data(hex: "000102030405060708090a0b0c0d0e0f")
         let mnemonic = Mnemonic.create(entropy: entropy)
         let seed = try! Mnemonic.createSeed(mnemonic: mnemonic)
@@ -26,7 +34,9 @@ class EthereumKitTests: XCTestCase {
             seed.toHexString(),
             "3779b041fab425e9c0fd55846b2a03e9a388fb12784067bd8ebdb464c2574a05bcc7a8eb54d7b2a2c8420ff60f630722ea5132d28605dbc996c8ca7d7a8311c0"
         )
-        
+    }
+    
+    func testSeedGeneration2() {
         let entropy2 = Data(hex: "a26a4821e36c7f7dccaa5484c080cefa")
         let mnemonic2 = Mnemonic.create(entropy: entropy2)
         let seed2 = try! Mnemonic.createSeed(mnemonic: mnemonic2)
@@ -61,7 +71,6 @@ class EthereumKitTests: XCTestCase {
             firstPrivateKey.hdPublicKey().publicKey().address(),
             "0x83f1caAdaBeEC2945b73087F803d404F054Cc2B7"
         )
-        
         XCTAssertEqual(
             firstPrivateKey.raw.toHexString(),
             "df02cbea58239744a8a6ba328056309ae43f86fec6db45e5f782adcf38aacadf"
